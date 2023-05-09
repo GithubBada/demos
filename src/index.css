@@ -11,3 +11,93 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+th {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  font-size: 25px;
+  width: 200px;
+}
+
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  color: black;
+  width: 80vw;
+}
+
+td,
+th {
+  border: 1px solid black;
+  padding: 10px;
+  background-color: white;
+}
+
+td{
+  font-size: 23px;
+}
+
+.left{
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background-color: #f5f5f5;
+}
+
+.right {
+  position: sticky;
+  right: 0;
+  z-index: 1;
+  background-color: #f5f5f5;
+}
+
+.left th,
+.left td {
+  left: 0;
+}
+
+.right th,
+.right td {
+  right: 0;
+}
+
+.pagination-content{
+  margin-right: 20px;
+}
+
+.pagination-content button{
+  width: 30px;
+  height: 30px;
+  margin-right: 6px;
+  cursor: pointer;
+}
+
+.arrows{
+  margin-left: 6px;
+  cursor: pointer;
+}
+
+.control input{
+  width: 30px;
+  margin-right: 12px;
+}
+
+.headerControl{
+  display: flex;
+  justify-content: space-between;
+  width: 70vw;
+  align-items: self-end;
+}
+
+.zIndexZh{
+  z-index: 2;
+}
+
+.tableContainer{
+  overflow-x: auto;
+  border-radius: 20px;
+  width: 70vw;
+  margin: 20px;
+  max-height: 50vh
+}
