@@ -22,5 +22,6 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
+          access_token: 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
           branch: gh-pages
           folder: build
