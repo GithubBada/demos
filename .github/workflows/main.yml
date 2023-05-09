@@ -1,4 +1,4 @@
-name: Deploy
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -8,17 +8,19 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
+
       - name: Install dependencies
         run: npm install
-      - name: Build
+
+      - name: Build application
         run: npm run build
-      - name: Deploy to Firebase
-        uses: FirebaseExtended/action-hosting-deploy@v0
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
-          firebase_version: '9.9.0'
-          firebase_token: '${{secrets.FIREBASE_TOKEN}}'
-          project_id: 'your-project-id'
-          site_id: 'your-site-id'
-          public_dir: 'build'
+          branch: gh-pages
+          folder: build
