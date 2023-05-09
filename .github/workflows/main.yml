@@ -13,6 +13,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+        node-version: 14.x
+
       - name: Install dependencies
         run: npm install
 
@@ -22,6 +27,6 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
-          access_token: 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
+          access_token: ${{ secrets.ACCESS_TOKEN }}
           branch: gh-pages
           folder: build
